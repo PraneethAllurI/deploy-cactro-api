@@ -11,4 +11,8 @@ router.post('/polls/:id/vote', controller.fetchPollById);
 // Route to get poll results
 router.get('/polls/:id', controller.displayPoll);
 
-module.exports = router;
+router.get('/', (req, res) => {
+    res.send("The API is working but there's a DB error");
+  });  
+
+module.exports = router; 
